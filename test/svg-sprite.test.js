@@ -42,13 +42,13 @@ const dest = path.join(__dirname, '../tmp');
  * @param {String} cwd                Working directory
  */
 function addFixtureFiles(spriter, files, cwd) {
-    files.forEach(file => {
+    for (const file of files) {
         spriter.add(
             path.resolve(path.join(cwd, file)),
             file,
             fs.readFileSync(path.join(cwd, file), 'utf-8')
         );
-    });
+    }
 }
 
 /**
@@ -226,7 +226,7 @@ describe('svg-sprite', () => {
     }];
 
     // Test the minimum configuration
-    testConfigs.forEach(testConfig => {
+    for (const testConfig of testConfigs) {
         describe(`${testConfig.name}: with minimum configuration and ${testConfig.files.length} SVG files`, () => {
             let spriter = null;
             let data = null;
@@ -524,7 +524,7 @@ describe('svg-sprite', () => {
                 });
             });
         });
-    });
+    }
 
     describe(`with centered alignment and ${align.length} SVG files`, () => {
         let spriter = null;
