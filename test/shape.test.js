@@ -4,6 +4,7 @@ const assert = require('assert').strict;
 const { readFileSync } = require('fs');
 const path = require('path');
 const { DOMParser } = require('@xmldom/xmldom');
+const _ = require('lodash');
 const SVGSpriter = require('../lib/svg-sprite.js');
 
 const isObject = obj => typeof obj === 'object' && !Array.isArray(obj) && obj !== null;
@@ -22,7 +23,7 @@ const expectations = [{
     }
 }];
 
-describe('shape', () => {
+describe('testing shape without dimensions', () => {
     expectations.forEach(expectation => {
         it(`should calculate the dimensions if the ${expectation.svg} does not contain viewBox or height/width properties (${expectation.result.width}x${expectation.result.height})`, done => {
             const spriter = new SVGSpriter({
@@ -64,3 +65,24 @@ describe('shape', () => {
         });
     });
 });
+
+describe('testing resetNameSpace invoke', () => {
+    it('should call resetNameSpace same times as in lodash method', () => {
+        let counter = 0;
+
+        class MockedSVGShape {
+            resetNamespace() {
+                counter++;
+            }
+        }
+
+        const shapes = [...Array.from({ length: 10 })].map(() => {
+            return new MockedSVGShape();
+        });
+
+        _.invoke(shapes, 'resetNamespace');
+
+        assert.equal(counter, 1);
+    });
+});
+
