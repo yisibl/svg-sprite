@@ -1,3 +1,5 @@
+'use strict';
+
 // resvg preheat
 const resvg = require('@resvg/resvg-js');
 
