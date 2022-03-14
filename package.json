@@ -27,7 +27,7 @@
   "scripts": {
     "lint": "xo",
     "fix": "xo --fix",
-    "mocha": "mocha \"test/**/*.test.js\"",
+    "mocha": "mocha \"test/**/*.test.js\" --jobs 0",
     "coverage": "c8 npm run mocha",
     "example": "node example.js",
     "test": "npm run mocha"
