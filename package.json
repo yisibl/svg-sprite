@@ -28,6 +28,8 @@
     "lint": "xo",
     "fix": "xo --fix",
     "mocha": "mocha \"test/**/*.test.js\"",
+    "coverage": "c8 npm run mocha",
+    "copy": "node scripts.js",
     "example": "node example.js",
     "test": "npm run mocha"
   },
