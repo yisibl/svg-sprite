@@ -1,11 +1,12 @@
 'use strict';
-
 const assert = require('assert').strict;
 const { readFileSync } = require('fs');
 const path = require('path');
 const calculateSvgDimensions = require('../lib/svg-sprite/utils/calculate-svg-dimensions.js');
 
 const { paths } = require('./helpers/constants.js');
+
+// require('./helpers/resvg-preheat.js');
 
 describe('calculateSvgDimensions', () => {
     it('should return the expected dimensions from 46x46 fixture', () => {

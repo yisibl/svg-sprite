@@ -9,6 +9,8 @@ const { isObject } = require('../lib/svg-sprite/utils/index.js');
 
 const { paths } = require('./helpers/constants.js');
 
+// require('./helpers/resvg-preheat.js');
+
 const expectations = [{
     svg: '46x46.svg',
     result: {

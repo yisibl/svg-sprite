@@ -12,6 +12,8 @@ const SVGSpriter = require('../lib/svg-sprite.js');
 const TEST_SVG = 'fixture/svg/single/weather-clear.svg';
 const TEST_EMPTY_SVG = '<svg></svg>';
 
+// require('./helpers/resvg-preheat.js');
+
 describe('testing SVGSpriter', () => {
     let spriter;
 
