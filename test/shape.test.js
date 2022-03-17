@@ -9,8 +9,7 @@ const { isObject } = require('../lib/svg-sprite/utils/index.js');
 
 const { paths } = require('./helpers/constants.js');
 
-// eslint-disable-next-line import/no-unassigned-import
-require('./helpers/resvg-preheat.js');
+// require('./helpers/resvg-preheat.js');
 
 const expectations = [{
     svg: '46x46.svg',

@@ -32,7 +32,7 @@
     "test": "npm run mocha"
   },
   "dependencies": {
-    "@resvg/resvg-js": "^2.0.0-alpha.4",
+    "@resvg/resvg-js": "^2.0.0-alpha.2",
     "@xmldom/xmldom": "^0.8.1",
     "async": "^3.2.3",
     "css-selector-parser": "^1.4.1",

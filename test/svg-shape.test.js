@@ -10,8 +10,7 @@ const getShape = require('../lib/svg-sprite/shape.js');
 const SVGSpriter = require('../lib/svg-sprite.js');
 const { paths } = require('./helpers/constants.js');
 
-// eslint-disable-next-line import/no-unassigned-import
-require('./helpers/resvg-preheat.js');
+// require('./helpers/resvg-preheat.js');
 
 describe('testing SVGShape initialization', () => {
     let spriter;
