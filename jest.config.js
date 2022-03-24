@@ -3,6 +3,8 @@
 module.exports = {
     clearMocks: true,
     resetMocks: true,
+    maxWorkers: 1,
+    detectOpenHandles: true,
     coverageProvider: 'v8',
     coverageReporters: ['html', 'lcov', 'text'],
     collectCoverageFrom: [
