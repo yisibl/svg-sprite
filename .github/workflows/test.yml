@@ -21,8 +21,8 @@ jobs:
       matrix:
         os: [ubuntu-latest, windows-latest, macos-latest]
         node:
-          - version: 12.22.12-rc.0
-            mirror: https://nodejs.org/download/rc
+          - version: 12.22.12
+            # mirror: https://nodejs.org/download/rc
             title: 12
           - version: 14
             title: 14
